@@ -1,0 +1,175 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    /* padding: 0; */
+} 
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    background-color: hsl(30, 54%, 90%);
+    color: hsl(30, 10%, 34%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 24px;
+}
+
+/* Container and Card */
+.container {
+    max-width: 1440px;
+    margin: 80px auto;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 24px;
+    padding: 24px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+}
+
+/* Headings */
+h1, h2 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    color: hsl(24, 5%, 18%);
+    margin-bottom: 12px;
+}
+
+h2 {
+    color: hsl(14, 45%, 36%);
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: hsl(332, 51%, 32%);
+    margin-bottom: 12px;
+}
+
+/* Lists */
+ul, ol {
+    padding-left: 20px;
+    list-style-position: outside;
+}
+
+ol li, ul li {
+    padding-left: 16px; /* Extra gap after the number */
+    margin-bottom: 12px;
+}
+
+li::marker {
+    color: hsl(332, 51%, 32%);
+    
+}
+
+/* Span */
+.total, .preparation, .cooking {
+    font-weight: 600;
+}
+
+
+/* Sections */
+.prep-time {
+    background-color: hsl(330, 100%, 98%);
+    padding: 28px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+}
+
+.header, .ingredients, .instructions  {
+    margin-bottom: 24px;
+}
+
+b {
+    color: hsl(30, 10%, 34%);
+}
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    border-top: 1px solid hsl(30, 18%, 87%);
+    margin-bottom: 24px;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table td {
+    padding: 12px 32px;
+    text-align: left;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+table td.left {
+    padding-right: 12px;
+}
+  
+
+table td.right {
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Remove margin bottom after li cooking */
+li.cooking {
+    margin-bottom: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+        margin: 0;
+        display: block; /* Change to block for natural flow */
+        min-height: auto; /* Remove min-height constraint */
+    }
+
+    .container {
+        margin: 0;
+        min-height: 100%; /* Ensures container doesn't overflow */
+    }
+
+    .card {
+        border-radius: 0;
+        padding: 0 0 20px 0;
+    }
+
+    .card-content {
+        padding: 0 32px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+}
